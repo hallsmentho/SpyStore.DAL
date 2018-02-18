@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace SpyStore.Models.Entities
 {
@@ -21,5 +20,7 @@ namespace SpyStore.Models.Entities
         public Customer Customer { get; set; }
         [InverseProperty("Order")]
         public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+        [Display(Name="Total")]
+        public decimal? OrderTotal { get; set; }
     }
 }

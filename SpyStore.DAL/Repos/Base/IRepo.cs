@@ -1,12 +1,9 @@
 ﻿using SpyStore.Models.Entities.Base;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SpyStore.DAL.Repos.Base
 {
-    interface IRepo<T> where T: EntityBase
+    public interface IRepo<T> where T: EntityBase
     {
         int Count { get; }
         bool HasChanges { get; }

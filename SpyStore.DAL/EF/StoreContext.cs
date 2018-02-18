@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SpyStore.Models.Entities;
+using System;
 
 namespace SpyStore.DAL.EF
 {
@@ -12,7 +13,14 @@ namespace SpyStore.DAL.EF
 
         public StoreContext(DbContextOptions options) : base(options)
         {
-
+            try
+            {
+                Database.Migrate();
+            }
+            catch (Exception ex)
+            {
+                // should do something intelligent here
+            }
 
         }
 
@@ -50,6 +58,10 @@ namespace SpyStore.DAL.EF
                 entity.Property(e => e.ShipDate)
                 .HasColumnType("datetime")
                 .HasDefaultValueSql("getdate()");
+
+                entity.Property(e => e.OrderTotal)
+                    .HasColumnType("money")
+                    .HasComputedColumnSql("Store.GetOrderTotal([Id])");
             });
 
             modelBuilder.Entity<OrderDetail>(entity =>

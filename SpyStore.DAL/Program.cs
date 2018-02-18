@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SpyStore.DAL
+﻿namespace SpyStore.DAL
 {
     class Program
     {

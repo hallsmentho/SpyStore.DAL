@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using JetBrains.Annotations;
 
 namespace SpyStore.DAL.EF
 {

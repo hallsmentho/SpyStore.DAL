@@ -1,8 +1,6 @@
 ﻿using SpyStore.DAL.EF;
 using System;
 using System.Linq;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 using SpyStore.Models.Entities;

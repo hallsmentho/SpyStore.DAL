@@ -2,10 +2,8 @@
 using SpyStore.DAL.EF;
 using SpyStore.DAL.Repos.Base;
 using SpyStore.Models.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace SpyStore.DAL.Repos
 {
